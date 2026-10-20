@@ -14,13 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SaludoController {
 
-    // Cambia este valor cuando quieras ver como el pipeline entrega una version nueva.
+    // Cambia este valor cuando quieras ver como el pipeline entrega una version
+    // nueva.
     public static final String VERSION = "1.0";
 
     /** Comprobacion de salud: util para saber si el servicio esta vivo. */
     @GetMapping("/api/health")
     public Map<String, String> health() {
-        return Map.of("status", "OK");
+        return Map.of("status", "KO");
     }
 
     /** Devuelve la version actual desplegada. */
